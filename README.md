@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+# NBT React Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Crear una app en React, que utilice preferentemente Typescript.
+- Hacer una interfaz que te permita filtrar los posts de JSONPlaceholder.
+    - Hint: La URL debe quedar así: https://jsonplaceholder.typicode.com/posts?body_like=lorem
+    - La definición de los estilos queda a criterio tuyo.
+- Constraints:
+    - Para hacer las peticiones usar TanStack Query (Antes se llamaba React Query, quizás la conocés con ese nombre).
+        - Importante leer los **Important Default**.
+    - El input se debe ***focusear*** cuando entrás a la página.
+    - No se debe permitir ver posts sin un filtro del body (cuando el string está vacío).
+    - Subir la app a Github.
 
-## Available Scripts
+___
 
-In the project directory, you can run:
+## Desarrollo
 
-### `npm start`
+Proyecto realizado con [Create React App](https://github.com/facebook/create-react-app).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Se utilizó Typescript, como preferentemente se solicitó.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Para estilos, se utilizó [Boostwatch](https://bootswatch.com/), que es una variante con base en Bootstrap con distintos temas definidos.
 
-### `npm test`
+La app filtra palabras incluidas en los párrafos de todos los post que provee la API JsonPlaceholder y muestra los resultados en forma de tarjetas, cada una correspondiente a un post.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Si no hay palabra a consultar (cadena vacía), no se muestran resultados.
 
-### `npm run build`
+Si no se encuentra la palabra (resultados 0), se informa y se invita a realizar otra búsqueda.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Además, para darle una armonía visual, se agregan datos de autores de cada post, solicitando tales datos desde la API [RandomUser](https://randomuser.me/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Las peticiones a JsonPlaceholder se configuraron de tal manera
 
-### `npm run eject`
+___
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Deploy
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Se ha hosteado la app en Vercel
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [NTB Challenge](https://ntbchallenge.vercel.app/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

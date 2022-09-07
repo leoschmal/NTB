@@ -11,7 +11,7 @@ function App() {
     <>
       <QueryClientProvider client={queryClient}>
         <div className="bg-secondary text-white">
-          <nav className="navbar sticky-top navbar-dark bg-primary p-0">
+          <nav className="navbar sticky-top navbar-dark shadow-sm bg-primary p-0">
             <div className="container pl-0 m-0">
               <a href="/">
                 <img src={logo} alt="Logo" style={{ width: "7rem" }}></img>

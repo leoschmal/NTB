@@ -8,10 +8,10 @@ export default function PostForm() {
 
   return (
     <>
-      <h2 className="text-center">Lorem Posts</h2>
+      <h2 className="text-center display-4 fw-bold">Lorem Posts</h2>
       <div className="d-flex justify-content-center">
       <form
-        className="input-group form-floating mb-3  w-50"
+        className="input-group form-floating mb-3 p-1 w-50 rounded-pill"
         onSubmit={(e: React.SyntheticEvent) => {
             e.preventDefault();
             const target = e.target as typeof e.target & {
@@ -23,7 +23,7 @@ export default function PostForm() {
           autoFocus
           type="text"
           name="busqueda"
-          className="form-control p-3 text-black"
+          className="form-control p-3 text-black rounded-pill"
           id="floatingInput"
           placeholder="Search"
           aria-label="Recipient's username"

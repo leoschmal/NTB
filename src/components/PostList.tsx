@@ -53,14 +53,15 @@ export default function PostList(props: any) {
         <PostCard post={post} key={post.id} />
       ))}
       </>)
-      :(<div className="alert alert-dismissible alert-warning text-center">      
+      :(
+      <div className="d-flex justify-content-center"><p className="alert alert-dismissible alert-warning text-center w-50">      
       <strong>Ups! </strong>
       No tuvimos suerte. 
       <a href="/" className="alert-link">
         Ingrese otra búsqueda 
       </a>
-       e inténtelo nuevamente.
-    </div>)
+        e inténtelo nuevamente.
+    </p></div>)
       }
       </>
   );
