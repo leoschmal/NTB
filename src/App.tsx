@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.png";
+import "./App.css";
+import PostForm from "./components/PostForm";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <QueryClientProvider client={queryClient}>
+        <div className="bg-secondary text-white">
+          <nav className="navbar sticky-top navbar-dark bg-primary p-0">
+            <div className="container pl-0 m-0">
+              <a href="/">
+                <img src={logo} alt="Logo" style={{ width: "7rem" }}></img>
+              </a>
+            </div>
+          </nav>
+
+          <main className="container p-4">
+            <PostForm />
+          </main>
+        </div>        
+      </QueryClientProvider>
+    </>
   );
 }
 
