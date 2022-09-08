@@ -14,6 +14,7 @@
 ___
 
 ## Desarrollo
+![Interface](https://raw.githubusercontent.com/leoschmal/NTB/main/public/interface.jpg?token=GHSAT0AAAAAABYLTQ52DXID4OXFDB4KKNFYYYZKOXA)
 
 Proyecto realizado con [Create React App](https://github.com/facebook/create-react-app).
 
