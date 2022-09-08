@@ -1,21 +1,24 @@
 import React from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery} from "@tanstack/react-query";
 import { Post } from "../interfaces/Post";
 import PostCard from "./PostCard";
 
 export default function PostList(props: any) {
+
    const getPosts = async () => {
     const response = await fetch(
       `https://jsonplaceholder.typicode.com/posts?body_like=${props.busqueda}`
-    );
+    );    
     return response.json();
   };
 
-  const { data, status } = useQuery(["posts", props.busqueda], getPosts, {
+  const { data, status} = useQuery(["posts", props.busqueda], getPosts, {
+    enabled: true,
     refetchOnMount: false,
     refetchOnWindowFocus: false,
     staleTime: Infinity,
     cacheTime: 0,
+    refetchInterval:500000,
   });
   if (status === "loading") {
     return (

@@ -30,7 +30,6 @@ Si no se encuentra la palabra (resultados 0), se informa y se invita a realizar 
 
 Además, para darle una armonía visual, se agregan datos de autores de cada post, solicitando tales datos desde la API [RandomUser](https://randomuser.me/).
 
-Las peticiones a JsonPlaceholder se configuraron de tal manera
 
 ___
 

@@ -22,7 +22,7 @@ function App() {
           <main className="container p-4">
             <PostForm />
           </main>
-        </div>        
+        </div>
       </QueryClientProvider>
     </>
   );
